@@ -1,0 +1,11 @@
+name: Deploy Application Workflow
+on:
+  repository_dispatch:
+    types: [deploy-application]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      # Add your deployment steps here
