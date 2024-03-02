@@ -3,9 +3,15 @@ on:
   repository_dispatch:
     types: [deploy-application]
 jobs:
-  deploy:
-    runs-on: ubuntu-latest
+  build-ios:
+    runs-on: macOS-latest
+
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-      # Add your deployment steps here
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Install Flutter
+        run: |
+          wget https://storage.googleapis.com/flutter_infra_release/releases/stable/macos/flutter_macos_3.7.12-stable.zip
+          unzip flutter_macos_3.7.12-stable.zip -d $HOME
+          echo "$HOME/flutter/bin" >> $GITHUB_PATH
