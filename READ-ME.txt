@@ -1,5 +1,5 @@
   =>  Template Name    : DGital - Digital Agency HTML Template
-this line is added to check jenkins pipeline for staticwebsite 
+this line is added to check jenkins pipeline for  staticwebsite 
 
   =>  Template Link    : https://htmlcodex.com/digital-agency-html-template
 
